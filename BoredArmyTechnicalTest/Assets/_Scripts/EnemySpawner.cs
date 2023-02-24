@@ -30,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
 
     private Vector2 PositionToSpawn()
     {
-        _spawnRangeX = Random.Range(-16f, 16f);
+        _spawnRangeX = Random.Range(-15f, 15f);
         _spawnRangeY = Random.Range(-10f, 10f);
 
         if (_spawnRangeX >= 7.5f && _spawnRangeX <= 12.2f)

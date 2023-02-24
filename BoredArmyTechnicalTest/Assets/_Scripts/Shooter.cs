@@ -97,7 +97,7 @@ public class Shooter : MonoBehaviour
 
         if (_health <= 0)
         {
-            GameManager._score += 50;
+            GameManager._score += 150;
         }
     }
 
