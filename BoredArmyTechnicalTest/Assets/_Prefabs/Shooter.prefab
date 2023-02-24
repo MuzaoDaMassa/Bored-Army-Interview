@@ -177,8 +177,8 @@ MonoBehaviour:
   _healthBar: {fileID: 5732013628160527849}
   _maxHealth: 150
   _impulse: 20
-  _distanceToShoot: 3.5
-  _rechargeTime: 0.5
+  _distanceToShoot: 3
+  _rechargeTime: 1.5
   _explosionPrefab: {fileID: 3516249299222995311, guid: f48afc610cf43f544ae896f3e3b99d6e, type: 3}
   _cannonBallPrefab: {fileID: 2547867634026484297, guid: ef9eeb2033e51cb45ab907d500793173, type: 3}
   _firingPoint: {fileID: 3943422478817725518}
