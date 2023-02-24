@@ -36,7 +36,7 @@ public class Chaser : MonoBehaviour
     {
         if (other.gameObject.tag == "CannonBall")
         {
-            TakeDamage(20);
+            TakeDamage(Random.Range(25, 51));
         }
 
         if (other.gameObject.tag == "Player")

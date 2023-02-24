@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D _rb;
 
     [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _screenLimitX;
+    [SerializeField] private float _screenLimitY;
 
     private Vector2 _movement;
     private Vector2 _mousePosition;
@@ -15,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     {
         _movement.y = Input.GetAxisRaw("Vertical");
         _mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+
+        FlipXPosition();
+        FlipYPosition();
     }
 
     private void FixedUpdate()
@@ -30,6 +35,30 @@ public class PlayerMovement : MonoBehaviour
 
             float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
             _rb.rotation = angle;
+        }
+    }
+
+    private void FlipXPosition()
+    {
+        if (transform.position.x > _screenLimitX)
+        {
+            transform.position = new Vector3(-transform.position.x + 0.1f, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x < -_screenLimitX)
+        {
+            transform.position = new Vector3(-transform.position.x - 0.1f, transform.position.y, transform.position.z);
+        }
+    }
+
+    private void FlipYPosition()
+    {
+        if (transform.position.y > _screenLimitY)
+        {
+            transform.position = new Vector3(transform.position.x, -transform.position.y + 0.1f, transform.position.z);
+        }
+        else if (transform.position.y < -_screenLimitY)
+        {
+            transform.position = new Vector3(transform.position.x, -transform.position.y - 0.1f, transform.position.z);
         }
     }
 }

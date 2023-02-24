@@ -39,7 +39,7 @@ public class PlayerHealthSystem : MonoBehaviour
     {
         if (other.gameObject.tag == "CannonBall")
         {
-            TakeDamage(20);
+            TakeDamage(Random.Range(20, 41));
         }
     }
 

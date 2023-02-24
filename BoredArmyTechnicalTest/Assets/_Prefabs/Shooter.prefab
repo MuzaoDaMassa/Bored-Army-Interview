@@ -95,12 +95,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3943422478147461187}
   - component: {fileID: 3943422478147461185}
-  - component: {fileID: 3943422478147461184}
   - component: {fileID: 3943422478147461214}
   - component: {fileID: 3943422478147461215}
+  - component: {fileID: 6161840521293759581}
   m_Layer: 0
   m_Name: Shooter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,32 +144,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &3943422478147461184
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3943422478147461186}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0018017292, y: -0.018018723}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.4630437, y: 1.0504522}
-  m_EdgeRadius: 0
 --- !u!114 &3943422478147461214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27bd808730d33d146bb234117effc7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 0.5
+  _moveSpeed: 1.5
 --- !u!114 &3943422478147461215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,13 +175,29 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 445f9feb748ab6b4a9c350acff5e7ee2, type: 3}
   - {fileID: 21300000, guid: 3ab88223580e71d438f06802eb52f30d, type: 3}
   _healthBar: {fileID: 5732013628160527849}
-  _maxHealth: 120
+  _maxHealth: 150
   _impulse: 20
   _distanceToShoot: 3.5
   _rechargeTime: 0.5
   _explosionPrefab: {fileID: 3516249299222995311, guid: f48afc610cf43f544ae896f3e3b99d6e, type: 3}
   _cannonBallPrefab: {fileID: 2547867634026484297, guid: ef9eeb2033e51cb45ab907d500793173, type: 3}
   _firingPoint: {fileID: 3943422478817725518}
+--- !u!70 &6161840521293759581
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3943422478147461186}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.007309437, y: -0.029237747}
+  m_Size: {x: 0.5584755, y: 1.6286108}
+  m_Direction: 0
 --- !u!1 &3943422478817725553
 GameObject:
   m_ObjectHideFlags: 0

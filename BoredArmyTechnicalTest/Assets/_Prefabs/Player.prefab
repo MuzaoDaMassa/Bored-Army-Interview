@@ -336,6 +336,8 @@ MonoBehaviour:
   _camera: {fileID: 0}
   _rb: {fileID: 8018892566910183046}
   _moveSpeed: 5
+  _screenLimitX: 16
+  _screenLimitY: 10
 --- !u!114 &8018892566910183040
 MonoBehaviour:
   m_ObjectHideFlags: 0
